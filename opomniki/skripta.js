@@ -24,6 +24,13 @@ window.addEventListener('load', function() {
 		
 	}
 	
+	var zacetekOpomnika=function(event){
+		var ime=document.querySelector("#naziv_opomnika").value;
+		var cas=document.querySelector("#cas_opomnika").value;
+		document.querySelector("#opomniki").innerHTML+="<div class='opomnik'><div class='naziv_opomnika'>"+ime+"</div><div class='cas_opomnika'> Opomnik čez <span>"+cas+"</span> sekund.</div></div>";
+	}
+	
 	document.querySelector("#prijavniGumb").addEventListener('click',izvediPrijavo);
+	document.querySelector("#dodajGumb").addEventListener('click',zacetekOpomnika);
 });
 
